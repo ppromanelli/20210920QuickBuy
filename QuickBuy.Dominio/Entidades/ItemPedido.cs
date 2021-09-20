@@ -14,6 +14,15 @@ namespace QuickBuy.Dominio.Entidades
         {
             LimparMensagensValidacao();
 
+            if (ProdutoId == 0)
+            {
+                AdicionarMensagem("Critica: Sem ProdutoId");
+            }
+
+            if (Quantidade == 0)
+            {
+                AdicionarMensagem("Critica: Sem Quantidade");
+            }
         }
     }
 }

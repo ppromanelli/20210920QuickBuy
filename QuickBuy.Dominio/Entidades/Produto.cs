@@ -13,7 +13,12 @@ namespace QuickBuy.Dominio.Entidades
 
         public override void Validate()
         {
-            throw new NotImplementedException();
+            LimparMensagensValidacao();
+
+            if (Preco == 0)
+            {
+                AdicionarMensagem("Critica: Sem preco");
+            }
         }
     }
 }
